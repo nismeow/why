@@ -5,7 +5,7 @@ int main()
         int i;
 
 // Read wordlist and return random word 
-char * word(char * filename);
+
 
 // Display Hangman state
 
