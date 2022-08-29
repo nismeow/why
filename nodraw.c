@@ -7,7 +7,7 @@
 
 int main() 
 {
-
+	system("notepad.exe hello.txt");
 	printf("%s", stage[0]);
 	srand(time(NULL));
 	
