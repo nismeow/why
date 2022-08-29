@@ -7,7 +7,7 @@
 
 int main() 
 {
-	system("notepad.exe hello.txt");
+	
 	printf("%s", stage[0]);
 	srand(time(NULL));
 	
@@ -97,7 +97,7 @@ int main()
 			}		
 		
 		}	
-		
+		system("cls");
 		if( correcto == correctn && reguessed == 0) {
 			lives--;
 			printf("Sorry, wrong guess\n");
