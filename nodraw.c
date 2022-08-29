@@ -1,10 +1,14 @@
-#include "stdio.h"
-#include "stdlib.h"
-#include "string.h"
-#include "time.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include "f1.c"
+
 
 int main() 
 {
+
+	printf("%s", stage[0]);
 	srand(time(NULL));
 	
 	char guesswords[][16] = {
