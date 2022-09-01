@@ -9,9 +9,9 @@ int main()
 {
 	
 	printf("%s", stage[0]);
-	srand(time(NULL));
-	//list of words
+	srand(time(NULL)); // to not repeat word in a game
 	
+	//word list
 	char guesswords[][16] = 
 	{
 		"bro", 
@@ -31,18 +31,18 @@ int main()
         "sociopath"
 	};
 	
-	int randomness = rand() % 15;
+	int randomness = rand() % 15; //15 ota word bhayera mathi
 	
 	int lives = 6;
-	int correctn = 0;
-	int correcto = 0;
-	int sum = 0;
+	int correctn = 0; //initialize new guess
+	int correcto = 0;  //initialize old guess
+	int sum = 0; // initialize drawing platform
 	
-	int wordlength = strlen(guesswords[randomness]);
+	int wordlength = strlen(guesswords[randomness]); //dash
 	
-	int guessed[13] = { 0,0,0,0,0,0,0,0,0,0,0,0,0};
+	int guessed[13] = { 0,0,0,0,0,0,0,0,0,0,0,0,0}; //longest 13 letter wala words
 	
-	int quit = 0;	
+	int quit = 0;	//game initialize
 	
 	int loopy = 0;
 	int reguessed = 0; 
