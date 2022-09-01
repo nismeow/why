@@ -10,8 +10,10 @@ int main()
 	
 	printf("%s", stage[0]);
 	srand(time(NULL));
+	//list of words
 	
-	char guesswords[][16] = {
+	char guesswords[][16] = 
+	{
 		"bro", 
 		"college",
 		"flabbergasted",
@@ -38,7 +40,7 @@ int main()
 	
 	int wordlength = strlen(guesswords[randomness]);
 	
-	int guessed[6] = { 0,0,0,0,0,0};
+	int guessed[13] = { 0,0,0,0,0,0,0,0,0,0,0,0,0};
 	
 	int quit = 0;	
 	
