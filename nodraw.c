@@ -31,9 +31,10 @@ int main()
 	
 	int randomness = rand() % 15;
 	
-	int lives = 5;
+	int lives = 6;
 	int correctn = 0;
 	int correcto = 0;
+	int sum = 0;
 	
 	int wordlength = strlen(guesswords[randomness]);
 	
@@ -98,15 +99,26 @@ int main()
 		
 		}	
 		system("cls");
-		if( correcto == correctn && reguessed == 0) {
-			lives--;
-			printf("Sorry, wrong guess\n");
-			if (lives == 0) {
+        printf("%s", stage[sum]);
+		if( correcto == correctn && reguessed == 0) 
+		{
+		lives--;
+		sum++;
+        
+		printf("Sorry, wrong guess\n");
+
+      	printf("%s", stage[sum]);
+	  	if (lives == 0) 
+            {
 				break;
 			}
-		} else if( reguessed == 1) {
+		} 
+		else if( reguessed == 1)
+		{
 			printf("Already Guessed!!\n");
-		} else {
+		} 
+		else 
+		{
 			printf("Correct guess!!\n");
 		}
 	
