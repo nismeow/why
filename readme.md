@@ -4,5 +4,5 @@
 
 Compile nodraw.c
 
-gcc nodraw.c -o nodraw
+<i>gcc nodraw.c -o nodraw</i>
 
