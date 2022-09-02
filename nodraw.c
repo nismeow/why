@@ -4,6 +4,7 @@
 #include <time.h>
 #include<ctype.h>
 #include "f1.c"
+#define max 100
 
 
 int main() 
@@ -12,24 +13,17 @@ int main()
 	printf("%s", stage[0]);
 	srand(time(NULL));
 	
-	char guesswords[][16] = 
+
+char guesswords[max][max]; //file ko array
+	FILE *fptr = NULL; //file kholeko
+    int i = 0; 
+
+	fptr = fopen("words.txt", "r");
+    while(fgets(guesswords[i], 100, fptr)) 
 	{
-		"bro", 
-		"college",
-		"flabbergasted",
-		"black",
-		"pinkfloyd",
-		"apple",
-        "lmao",
-        "alabama",
-        "bigoof",
-        "okay",
-        "pseudonym",
-        "pocket",
-        "dramatist",
-        "football",
-        "sociopath"
-	};
+        guesswords[i][strlen(guesswords[i]) - 1] = '\0';
+        i++;
+    }
 	
 	int randomness = rand() % 15;
 	
