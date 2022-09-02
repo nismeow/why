@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include<ctype.h>
 #include "f1.c"
 
 
@@ -9,9 +10,8 @@ int main()
 {
 	
 	printf("%s", stage[0]);
-	srand(time(NULL)); // to not repeat word in a game
+	srand(time(NULL));
 	
-	//word list
 	char guesswords[][16] = 
 	{
 		"bro", 
@@ -31,18 +31,18 @@ int main()
         "sociopath"
 	};
 	
-	int randomness = rand() % 15; //15 ota word bhayera mathi
+	int randomness = rand() % 15;
 	
 	int lives = 6;
-	int correctn = 0; //initialize new guess
-	int correcto = 0;  //initialize old guess
-	int sum = 0; // initialize drawing platform
+	int correctn = 0;
+	int correcto = 0;
+	int sum = 0;
 	
-	int wordlength = strlen(guesswords[randomness]); //dash
+	int wordlength = strlen(guesswords[randomness]);
 	
-	int guessed[13] = { 0,0,0,0,0,0,0,0,0,0,0,0,0}; //longest 13 letter wala words
+	int guessed[13] = { 0,0,0,0,0,0,0,0,0,0,0,0,0};
 	
-	int quit = 0;	//game initialize
+	int quit = 0;	
 	
 	int loopy = 0;
 	int reguessed = 0; 
@@ -58,9 +58,11 @@ int main()
 	
 		for( loopy = 0; loopy < wordlength; loopy++) 
         {
-			if(guessed[loopy] == 1) {
+			if(guessed[loopy] == 1)
+			{
 				printf("%c",guesswords[randomness][loopy]);				
-			} else {
+			} else 
+			{
 				printf("-");
 			}
 		
@@ -72,12 +74,9 @@ int main()
 		printf("Guess a letter:");
 		fgets(guess, 16, stdin);
 		
-		if( strncmp(guess, "quit", 4) == 0) {
-			quit = 1;
-			break;
-		}
-		
+
 		enteredletters = guess[0];
+		enteredletters = tolower(enteredletters);
 		reguessed = 0; 
 		
 		printf("letters entered:%c\n",enteredletters);
@@ -87,7 +86,8 @@ int main()
 		for( loopy = 0; loopy < wordlength; loopy++) {
 		
 			if(guessed[loopy] == 1) {
-				if(guesswords[randomness][loopy] == enteredletters) {
+				if(guesswords[randomness][loopy] == enteredletters)
+				 {
 					reguessed = 1; 
 					break;
 				} 
