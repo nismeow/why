@@ -25,7 +25,7 @@ char guesswords[max][max]; //file ko array
         i++;
     }
 	
-	int randomness = rand() % 15;
+	int randomness = rand() % i;
 	
 	int lives = 6;
 	int correctn = 0;
