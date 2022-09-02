@@ -120,9 +120,9 @@ char guesswords[max][max]; //file ko array
 	
 	} 
 	
-	if( quit == 1 ) {	
-		printf("\nquit early\n");
-	} else if (lives == 0) {
+	
+	if (lives == 0) 
+	{
 		printf("\nYou lost! The word was: %s\n", guesswords[randomness]);	
 	} else  {	
 		printf("\nGoodjob! the word was: %s\nYou Win!!!!!\n", guesswords[randomness]);
